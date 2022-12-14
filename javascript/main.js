@@ -1,44 +1,71 @@
+class Usuario {
+    constructor(nombre, alias, clave, saldo) {
+        this.nombre = nombre;
+        this.alias = alias;
+        this.clave = clave;
+        this.saldo = saldo;
+    }
+}
 
-const usuarioAutorizado = "Coder";
+const cliente1 = new Usuario("Rodrigo", "Rodri90", "Chapa", 27000);
+const cliente2 = new Usuario("Sofia", "Sofi91", "Plato", 15000);
+const cliente3 = new Usuario("Benicio", "Beni25", "Roblox", 9000);
+
+const arrayUsuarios = [cliente1, cliente2, cliente3];
+
+
+console.log("Usuarios activos: ");
+console.log(arrayUsuarios);
+
+
+const usuario = arrayUsuarios.find(usuario => usuario.alias === "Rodri90");
+
+const usuarioAutorizado = "2";
 const claveAutorizada = "1234";
-let saldoInicial = 37000;
-let saldoRetirado = saldoRetirado;
+const saldoInicial = 37000;
 
-
-
-
-
-for(let i = 0 ; i < 3 ; i++) {
+arrayUsuarios.forEach((usuario) => { 
     let usuarioIngresado = prompt("Ingrese su nombre de Usuario:");
-    if (usuarioIngresado === usuarioAutorizado) {
+    if (usuarioIngresado === usuario.alias) {
         for(let i = 0 ; i < 3 ; i++) {
-            let claveIngresada = prompt("Ingrese su Clave:");
-            if (claveIngresada === claveAutorizada) {
-                let saldoRetirado = parseInt(prompt("Saldo disponible: $" + saldoDisponible + " Ingrese el monto a retirar: "))
-                if (saldoRetirado < saldoDisponible) {
+            let claveIngresada = prompt("Bienvenido/a " + usuario.nombre + ". Ingresa tu Clave:");
+            if (claveIngresada === usuario.clave) {
+                for(let i = 0 ; i < 1 ; i++) {
+                let saldoRetirado = parseInt(prompt("Saldo disponible: $" + usuario.saldo + ". Ingrese el monto a retirar: "))
+                let saldoDisponible = resta(usuario.saldo, saldoRetirado)
+                if (saldoRetirado <= usuario.saldo) {
                     saldoRetirado = alert("Quedan $" + saldoDisponible + " en su cuenta")  
-                } else { saldoRetirado = alert("Saldo no disponible")}
+                } else { saldoRetirado = alert("¡ERROR! Saldo insuficiente para realizar la operación")}
             break;
+             };} else { claveIngresada = prompt("¡CONTRASEÑA INCORRECTA! Intente una vez más:")
+             if (claveIngresada === usuario.clave) {
+                for(let i = 0 ; i < 1 ; i++) {
+                let saldoRetirado = parseInt(prompt("Saldo disponible: $" + usuario.saldo + ". Ingrese el monto a retirar: "))
+                let saldoDisponible = resta(usuario.saldo, saldoRetirado)
+                if (saldoRetirado <= usuario.saldo) {
+                    saldoRetirado = alert("Quedan $" + saldoDisponible + " en su cuenta. Muchas gracias.")  
+                } else { saldoRetirado = alert("¡ERROR! Saldo insuficiente para realizar la operación")}
+            break;
+             };}
+            break;
+  
+  
         }
         
         }
 
-    break;
+    ;
     } else {
     usuarioIngresado = alert("¡Usuario incorrecto!");
     }
-}
+});
+
 
 function resta(valorA, valorB) {
     let resultado = valorA - valorB;
     return resultado;
-} 
 
- let saldoDisponible = resta(saldoInicial, saldoRetirado);
- console.log (resultado);
-
-
-
+ }
 
 
 
