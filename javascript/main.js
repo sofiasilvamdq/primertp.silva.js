@@ -1,4 +1,4 @@
-class Usuario {
+/*class Usuario {
     constructor(nombre, alias, clave, saldo) {
         this.nombre = nombre;
         this.alias = alias;
@@ -65,7 +65,45 @@ function resta(valorA, valorB) {
     let resultado = valorA - valorB;
     return resultado;
 
- }
+ }*/
+
+ function Usuario (nombre, apellido, alias, clave, ) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.alias = alias;
+    this.clave = clave;
+}
+
+
+const arrayUsuarioNuevo = [];
+
+const formularioNuevoUsuario = document.getElementById("formularioNuevoUsuario");
+
+formularioNuevoUsuario.addEventListener("submit", (e)=>{
+e.preventDefault();
+
+const nombre = document.getElementById("nombre").value;
+const apellido = document.getElementById("apellido").value;
+const alias = document.getElementById("alias").value;
+const clave = document.getElementById("clave").value;
+
+const usuario = new Usuario(nombre, apellido, alias, clave);
+arrayUsuarioNuevo.push(usuario);
+console.log(arrayUsuarioNuevo);
+ formularioNuevoUsuario.reset();
+})
+
+const usuarioNuevoJSON = JSON.stringify(formularioNuevoUsuario);
+console.log(usuarioNuevoJSON, typeof usuarioNuevoJSON);
+
+
+localStorage.setItem("usuario", usuarioNuevoJSON);
+
+const usuarioRecuperado = localStorage.getItem("usario");
+
+const usuarioObjeto = JSON.parse(usuarioRecuperado);
+
+console.log(usuarioObjeto, typeof usuarioObjeto);
 
 
 
