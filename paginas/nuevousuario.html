@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuario nuevo</title>
     <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="icon" type="image/x-icon" href="/img/images.png" />
 </head>
 
 <body>
@@ -26,19 +27,24 @@
             <input type="text" id="alias">
             <br><br>
             <label for="clave">Contraseña</label>
-            <input type="text" id="clave">
+            <input type="password" id="clave">
             <br><br>
-            <button>Enviar</button>
+            <button class="botonEnviar" onclick="enviar()">Enviar</button>
+            
             <br>
             <br>
+            
     
         </form>
+
+        <div id = "error"></div>
     
         <a href="/index.html"><button class="boton">volver a pagina principal</button></a>
     </div>
     
+    <div id="contenedorUsuario"></div>
     
-    <div id="formularioNuevoUsuario"></div>
+    
     
     <script src="/javascript/main.js"></script>
 </body>

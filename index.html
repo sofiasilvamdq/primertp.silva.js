@@ -1,10 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAJERO AUTOMÁTICO</title>
     <link rel="stylesheet" href="css/estilo.css">
-
+    <link rel="icon" type="image/x-icon" href="/img/images.png" />
 </head>
 
 <body>
@@ -13,24 +15,18 @@
 
     <div class="contenedor">
     
-        <form id="ingresoUsuario">
-            <p>Ingrese sus datos:</p>
-            <label for="usuarioIngresado">usuario</label>
-            <input type="text" id="usuarioIngresado">
-            <br><br>
-            <label for="claveIngresada">contraseña</label>
-            <input type="text" id="claveIngresada">
-            <button>Enviar</button>
-            <br>
-            <br>
-            
-        </form>
         
+        <button class="boton" onclick="mostrar()">Ingreso Usuario Ya Registrado</button>
+            
+        <br>
+        <br>
     
         <a href="paginas/nuevousuario.html"><button class="boton">Crear Usuario</button></a>
     </div>
         
-   
+    <script src="/javascript/usuarioregistrado.js"></script>
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
+    <script src = "/javascript/sweetalert.js"></script> 
 </body>
 
 </html>
