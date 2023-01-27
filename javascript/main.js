@@ -1,13 +1,12 @@
 class Usuario {
-    constructor(nombre, apellido, alias, clave, saldo ) {
+    constructor(nombre, apellido, username, password, saldo ) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.alias = alias;
-        this.clave = clave;
+        this.username = username;
+        this.password = password;
         this.saldo = saldo;
     }
 }
-
 
 
 const arrayUsuarioNuevo = [];
@@ -19,11 +18,11 @@ formularioNuevoUsuario.addEventListener("submit", (e)=>{
 
     const nombre = document.getElementById("nombre");
     const apellido = document.getElementById("apellido");
-    const alias = document.getElementById("alias");
-    const clave = document.getElementById("clave");
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
    
  
-    const cliente = new Usuario(nombre.value, apellido.value, alias.value, clave.value);
+    const cliente = new Usuario(nombre.value, apellido.value, username.value, password.value);
     arrayUsuarioNuevo.push(cliente);
     console.log(arrayUsuarioNuevo);
     formularioNuevoUsuario.reset();
@@ -38,5 +37,21 @@ const usuarioGuardadoJSON = localStorage.getItem("usuario");
 const usuarioRegistrado = JSON.parse(usuarioGuardadoJSON);
 
 console.log(usuarioRegistrado, typeof usuarioRegistrado);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("formulario").addEventListener('submit', enviar); 
+  });
+
+function enviar(evento) {
+    evento.preventDefault();
+    var usuario = document.getElementById('usuario').value;
+    if(usuario = true) {
+  window.location.href="/index.html"
+    }
+ 
+    this.submit();
+  }
+
 
 })

@@ -1,52 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuario nuevo</title>
-    <link rel="stylesheet" href="/css/estilo.css">
-    <link rel="icon" type="image/x-icon" href="/img/images.png" />
+    <title>HomeBanking</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="icon" type="image/x-icon" href="/img/Verde y Turquesa.png" />
 </head>
 
 <body>
-    <h1>CAJERO AUTOMÁTICO</h1>
-    <h2>CODERBANK</h2>
-    <div class="contenedor">
+
+
+    <header>
+      
+        <div class="contenedorArriba">
     
+            <div class="logo">
+                <a href="../index.html"><img class="imgLogo" src="../Img/Verde y Turquesa Moderno Gradiente Bancario Logo de Finanzas.png" alt="logo"></a>
+                <h1 class="nombreEmpresa">CODERBANK</h1>
+            </div>
+            
+                      
+        </div>
+    </header>
+
+   
+    
+    <div class="contenedorGiganteNuevoUsuario">
+    
+        <h5>INGRESO NUEVO USUARIO</h5>
+        <h4>Para poder utilizar el HomeBanking requerimos que complete los datos que se solicitan en el formulario a continuación por unica vez.</h4>
         <form id="formularioNuevoUsuario">
-            <p>Ingrese sus datos:</p>
+            <legend>Ingrese sus datos</legend>
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre">
+            <input type="text" id="nombre" required>
+            <div id = "errorNombre"></div>
             <br><br>
             <label for="apellido">Apellido</label>
-            <input type="text" id="apellido">
+            <input type="text" id="apellido" required>
+            <div id = "errorApellido"></div>
             <br><br>
-            <label for="alias">Usuario</label>
-            <input type="text" id="alias">
+            <label for="username">Usuario</label>
+            <input type="text" id="username" required>
+            <div id = "errorUsername"></div>
             <br><br>
-            <label for="clave">Contraseña</label>
-            <input type="password" id="clave">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" required>
+            <div id = "error"></div>
             <br><br>
-            <button class="botonEnviar" onclick="enviar()">Enviar</button>
-            
+            <input class="botonEnviar" type="submit" value="Enviar" onclick="return enviar();">
             <br>
             <br>
+           
+            <br>
+                
             
     
         </form>
+   
+        <a class="botonCrearUsuario" href="/index.html"><button class="boton">volver a pagina principal</button></a>
 
-        <div id = "error"></div>
+
     
-        <a href="/index.html"><button class="boton">volver a pagina principal</button></a>
     </div>
+        <footer>
+            <div class="contenedorGrandeFooter">
+                <div class="container_footer">
+                    <div class="box_footer">
+                        <div class="logo_footer">
+                            <img class="logoImagenFooter" src="../img/Verde y Turquesa Moderno Gradiente Bancario Logo de Finanzas.png" alt="logo_footer"> 
+        
+                            <div class="parrafoFooter">
+                                <p>
+                                    Estamos con vos siempre creando oportunidades.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_footer">
+                        <h2>Empresa</h2>
+                        <h2>Tel. 0800-333-CODER </h2>
+        
+        
+                    </div>
+                    <div class="box_footer">
+                        <div></div>
+                        <h2>Redes Sociales</h>
+                            <a class="etiquetasAfooter"> Facebook </a>
+                            <a class="etiquetasAfooter"> Instagram </a>
+        
+                    </div>
+        
+                </div>
+                
+            
+            </div>
+            <div class="box-copyright">
+        
+        
+                <p>Todos los derechos reservados ©2023<b>Sofia Silva</b></p>
+
+
+            </div>
+        </footer>
+        
     
-    <div id="contenedorUsuario"></div>
-    
-    
-    
+    <script src="https://kit.fontawesome.com/2cb25f2c39.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>   
     <script src="/javascript/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        
 </body>
 
 </html>
