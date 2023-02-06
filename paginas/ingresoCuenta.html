@@ -22,17 +22,25 @@
             </div>
             
             <div class="container__header">
-                
-                        
+            
+                <div class="botonBienvenida">
+                    <p>Bienvenido/a a tu HomeBanking </p>
+                    <a id="nombreUsuario"></a>&nbsp;&nbsp;<a id="apellidoUsuario"></a>
+                </div>
                 <a class="botonCrearUsuario" href="../index.html"><button class="boton">Cerrar Sesión</button></a>
             </div>
-           
         </div>
     </header>
 <main>
    <div class="contenedorGiganteIngresoCuenta">
+    <div class="contenedorSaldo"> 
+        <button class="botonSaldo" id= "consultaSaldo">Saldo</button>
+        <button class="botonSaldo" id= "ingresarSaldo">Depósitos</button>   
+        <button class="botonSaldo" id= "retirarSaldo">Extracciones</button> 
+    </div> 
+    <div class="contenedorPubli">
         <img class="imagenPubli" src="../img/publipagina1.jpg" alt="publicidadBanco">
-
+    </div>
     </div>
 </main>
     <footer>
@@ -76,7 +84,7 @@
         </div>
     </footer>
         
- 
+    <script src="/javascript/ingresoCuenta.js"></script> 
     <script src="https://kit.fontawesome.com/2cb25f2c39.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>   
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 

@@ -20,12 +20,11 @@
                 <a href="../index.html"><img class="imgLogo" src="../Img/Verde y Turquesa Moderno Gradiente Bancario Logo de Finanzas.png" alt="logo"></a>
                 <h1 class="nombreEmpresa">CODERBANK</h1>
             </div>
-            
+        
                       
         </div>
     </header>
 
-   
     
     <div class="contenedorGiganteNuevoUsuario">
     
@@ -33,8 +32,8 @@
         <h4>Para poder utilizar el HomeBanking requerimos que complete los datos que se solicitan en el formulario a continuación por unica vez.</h4>
         <form id="formularioNuevoUsuario">
             <legend>Ingrese sus datos</legend>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" required>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" required autofocus>
             <div id = "errorNombre"></div>
             <br><br>
             <label for="apellido">Apellido</label>
@@ -49,7 +48,7 @@
             <input type="password" id="password" required>
             <div id = "error"></div>
             <br><br>
-            <input class="botonEnviar" type="submit" value="Enviar" onclick="return enviar();">
+            <input id="formulario" class="botonEnviar" type="submit" value="enviar" onclick="return enviar();">
             <br>
             <br>
            
@@ -105,10 +104,9 @@
             </div>
         </footer>
         
-    
+        <script src="/javascript/main.js"></script>
     <script src="https://kit.fontawesome.com/2cb25f2c39.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>   
-    <script src="/javascript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         
