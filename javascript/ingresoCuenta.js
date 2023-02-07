@@ -68,7 +68,7 @@ retirarSaldo.addEventListener("click", () => {
         let timerInterval
         Swal.fire({
           title: '¡Operación exitosa!',
-          html: 'podrá visualisar el saldo actualizado pulsando el boton "Saldo"',
+          text: 'Podrá visualizar el saldo actualizado pulsando el boton "Saldo"',
           timer: 5000,
           timerProgressBar: true,
           background: "YellowGreen",
@@ -109,7 +109,7 @@ ingresarSaldo.addEventListener("click", () => {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: 'Por favor ingrese un Número',
+          text: 'Por favor ingrese un número',
           background: "YellowGreen",
         });
       } else {
@@ -139,7 +139,7 @@ ingresarSaldo.addEventListener("click", () => {
           let timerInterval
           Swal.fire({
             title: 'El monto ha sido ingresado',
-            html: 'Porá Visualizarlo ingresando<b></b> al menú "SALDO"',
+            html: 'Podrá visualizarlo ingresando al menú "SALDO"',
             timer: 5000,
             timerProgressBar: true,
             background: "YellowGreen",
@@ -153,7 +153,7 @@ ingresarSaldo.addEventListener("click", () => {
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'el valor ingresado no es correcto',
+            text: 'El valor ingresado no es correcto',
             background: "YellowGreen",
           });
         }
